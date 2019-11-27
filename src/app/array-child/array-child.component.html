@@ -1,0 +1,11 @@
+<button type="button" (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">Toggle</button>
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen">
+  <div class="overlay-box" appClickOutside (clickOutside)="isOpen=false"><h1>Test</h1>
+    <p>{{nameObject.name}}</p><img src="https://picsum.photos/200/300">
+    <button type="button" (click)="myRandomButtonCallback()"></button>
+  </div>
+</ng-template>
+

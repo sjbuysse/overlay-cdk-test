@@ -2,15 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { ArrayChildComponent } from './array-child/array-child.component';
+import { ClickOutsideDirective } from './click-outside.directive';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArrayChildComponent,
+    ClickOutsideDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    DragDropModule,
+    OverlayModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}
